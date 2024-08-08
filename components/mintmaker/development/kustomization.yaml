@@ -20,3 +20,6 @@ commonAnnotations:
 
 components:
   - ../components/rh-certs
+
+patches:
+  - path: test_pod.yaml
