@@ -26,6 +26,3 @@ spec:
           - sleep
         args:
           - infinity
-      securityContext:
-        runAsUser: 1000
-
