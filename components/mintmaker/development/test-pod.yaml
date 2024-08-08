@@ -5,6 +5,8 @@ metadata:
   namespace: mintmaker
 spec:
   template:
+    metadata:
+      labels: []
     spec:
       containers:
       - name: test-pod
