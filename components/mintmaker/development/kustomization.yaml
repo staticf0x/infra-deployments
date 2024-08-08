@@ -4,11 +4,15 @@ resources:
   - ../base
   - https://github.com/konflux-ci/mintmaker/config/default?ref=e140ba058b127890681fd73fc8beefda48abcd7f
   - https://github.com/konflux-ci/mintmaker/config/renovate?ref=e140ba058b127890681fd73fc8beefda48abcd7f
+  - test-pod.yaml
 
 images:
   - name: quay.io/konflux-ci/mintmaker
     newName: quay.io/konflux-ci/mintmaker
     newTag: e140ba058b127890681fd73fc8beefda48abcd7f
+  - name: quay.io/konflux-ci/mintmaker-renovate-image:latest
+    newName: quay.io/konflux-ci/mintmaker-renovate-image
+    newTag: latest
 
 namespace: mintmaker
 

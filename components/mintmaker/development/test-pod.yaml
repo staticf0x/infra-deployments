@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-pod
+  namespace: mintmaker
+spec:
+  selector:
+    matchLabels:
+      control-plane: test-pod
+  template:
+    metadata:
+      labels:
+        control-plane: test-pod
+    spec:
+      volumes:
+        - name: secret-volume
+          secret:
+            secretName: docker-config-json
+            items:
+              - key: .dockerconfigjson
+                path: config.json
+      containers:
+      - name: test-pod
+        resources:
+          limits:
+            cpu: 500m
+            memory: 2048Mi
+          requests:
+            cpu: 100m
+            memory: 256Mi
+        image: quay.io/konflux-ci/mintmaker-renovate-image:latest
+        command:
+          - sleep
+        args:
+          - infinity
+        volumeMounts:
+          - name: secret-volume
+            readOnly: true
+            mountPath: "/.docker"
