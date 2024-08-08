@@ -4,6 +4,7 @@ metadata:
   name: test-pod
   namespace: mintmaker
 spec:
+  serviceAccountName: mintmaker-controller-manager
   selector:
     matchLabels:
       control-plane: test-pod
