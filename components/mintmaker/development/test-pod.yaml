@@ -23,4 +23,6 @@ spec:
             memory: 256Mi
         image: quay.io/konflux-ci/mintmaker-renovate-image:latest
         command:
-          - /bin/sh
+          - sleep
+        args:
+          - infinity
