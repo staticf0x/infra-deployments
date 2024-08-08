@@ -16,4 +16,5 @@ spec:
             cpu: 100m
             memory: 256Mi
         image: quay.io/konflux-ci/mintmaker-renovate-image:latest
-        command: /bin/sh
+        command:
+          - /bin/sh
