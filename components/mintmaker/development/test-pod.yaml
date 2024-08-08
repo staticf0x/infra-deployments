@@ -6,7 +6,8 @@ metadata:
 spec:
   template:
     metadata:
-      labels: []
+      labels:
+        app: mintmaker
     spec:
       containers:
       - name: test-pod
