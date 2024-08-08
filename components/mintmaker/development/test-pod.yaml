@@ -4,6 +4,9 @@ metadata:
   name: test-pod
   namespace: mintmaker
 spec:
+  selector:
+    matchLabels:
+      control-plane: test-pod
   template:
     metadata:
       labels:
