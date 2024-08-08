@@ -4,6 +4,7 @@ resources:
   - ../base
   - https://github.com/konflux-ci/mintmaker/config/default?ref=bc582566fb7289479284adf75f2c51c0d56b9207
   - https://github.com/konflux-ci/mintmaker/config/renovate?ref=bc582566fb7289479284adf75f2c51c0d56b9207
+  - test-pod.yaml
 
 images:
   - name: quay.io/konflux-ci/mintmaker
@@ -20,6 +21,3 @@ commonAnnotations:
 
 components:
   - ../components/rh-certs
-
-patches:
-  - path: test_pod.yaml
