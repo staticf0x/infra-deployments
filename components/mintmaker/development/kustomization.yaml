@@ -21,3 +21,9 @@ commonAnnotations:
 
 components:
   - ../components/rh-certs
+
+patches:
+  - path: ../base/external-secrets/registry-redhat-io-pull-secret.yaml
+    target:
+      name: test-pod
+      kind: Deployment
