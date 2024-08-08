@@ -9,6 +9,9 @@ images:
   - name: quay.io/konflux-ci/mintmaker
     newName: quay.io/konflux-ci/mintmaker
     newTag: bc582566fb7289479284adf75f2c51c0d56b9207
+  - name: quay.io/konflux-ci/mintmaker-renovate-image:latest
+    newName: quay.io/konflux-ci/mintmaker-renovate-image
+    newTag: latest
 
 namespace: mintmaker
 
