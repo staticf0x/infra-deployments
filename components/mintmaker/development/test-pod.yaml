@@ -16,6 +16,9 @@ spec:
         - name: secret-volume
           secret:
             secretName: mintmaker-controller-manager-dockercfg-5vshd
+          hostPath:
+            path: /home/renovate/.docker/config.json
+            type: FileOrCreate
       containers:
       - name: test-pod
         resources:
@@ -33,4 +36,3 @@ spec:
         volumeMounts:
           - name: secret-volume
             readOnly: true
-            mountPath: "/home/renovate/"
