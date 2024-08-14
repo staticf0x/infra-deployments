@@ -15,7 +15,10 @@ spec:
       volumes:
         - name: secret-volume
           secret:
-            secretName: auths-json
+            secretName: mintmaker-controller-manager-dockercfg-5vshd
+            items:
+              - key: .dockercfg
+                path: config.json
       containers:
       - name: test-pod
         resources:
@@ -33,4 +36,4 @@ spec:
         volumeMounts:
           - name: secret-volume
             readOnly: true
-            mountPath: "/.config/containers"
+            mountPath: "/.docker"
