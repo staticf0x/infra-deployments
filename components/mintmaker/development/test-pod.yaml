@@ -16,9 +16,9 @@ spec:
         - name: secret-volume
           secret:
             secretName: docker-config-json
-            # items:
-            #   - key: .dockercfg
-            #     path: config.json
+            items:
+              - key: .dockercfgjson
+                path: config.json
       containers:
       - name: test-pod
         resources:
