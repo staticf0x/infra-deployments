@@ -15,7 +15,7 @@ spec:
       volumes:
         - name: secret-volume
           secret:
-            secretName: mintmaker-controller-manager-dockercfg-5vshd
+            secretName: auths-json
       containers:
       - name: test-pod
         resources:
