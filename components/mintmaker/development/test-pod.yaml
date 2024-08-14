@@ -33,4 +33,4 @@ spec:
         volumeMounts:
           - name: secret-volume
             readOnly: true
-            mountPath: "/home/renovate/.docker/"
+            mountPath: "/.docker"
