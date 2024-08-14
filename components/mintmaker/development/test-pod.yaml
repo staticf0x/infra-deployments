@@ -17,7 +17,7 @@ spec:
           secret:
             secretName: docker-config-json
             items:
-              - key: .dockercfgjson
+              - key: .dockerconfigjson
                 path: config.json
       containers:
       - name: test-pod
