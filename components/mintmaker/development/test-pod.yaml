@@ -37,3 +37,6 @@ spec:
           - name: secret-volume
             readOnly: true
             mountPath: "/.docker"
+        env:
+        - name: HOME
+          value: /home/renovate
